@@ -1,0 +1,111 @@
+body,h1,h2,h3,h4,h5,h6,blockquote,p,pre,dl,dd,ol,ul,li,a,span,caption,th,td,form,fieldset,legend,input,button,textarea,address,hr{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+ol,ul{list-style:none}
+li{list-style:none;}
+fieldset,img{border:0}
+address,cite,dfn,em,var{font-style:normal}
+code,kbd,pre,samp{font-family:courier new,courier,monospace}
+input,button,textarea,select{font-size:100%;}
+input,button,select,textarea{outline:none;}
+textarea{resize:none;}
+table{border-collapse:collapse;border-spacing:0;empty-cells:show;font-size:inherit}
+abbr[title]{border-bottom:1px dotted;cursor:help}
+a,a:hover{text-decoration:none;color:#333;}
+a,label, :focus{outline:0 none;}
+a, img{border:0 none;}
+s{font-style:normal; text-decoration:none;}
+body{font:12px/1 "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; }
+button, input, select, textarea {font-family:"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+.clearfix:after{display: block; content: "\20"; height: 0; clear: both; overflow: hidden; visibility: hidden;}/*ie8*/
+.clearfix{*zoom:1;}/*ie6-7*/
+
+body{ font-size:14px; color:#000; background:#fafafa; }
+h1{ font-size:24px; padding-bottom:20px; }
+h2{ font-size:18px; padding-bottom:20px; }
+h3{ font-size:16px; padding-bottom:12px; }
+h4{ font-size:14px; padding-bottom:8px; }
+h5{ font-size:12px; padding-bottom:8px; }
+b{ font-size:16px; font-weight:bold; }
+.article>.section h2{ font-size:24px; padding-bottom:20px; }
+.article>.section h3{ font-size:18px; padding-bottom:20px; }
+.article>.section h4{ font-size:16px; padding-bottom:12px; }
+.article>.section h5{ font-size:14px; padding-bottom:8px; }
+
+body{ margin:0 auto; width:960px; }
+.book>.titlepage,
+  .article>.titlepage{ margin:60px 0 50px; }
+.book>.titlepage h1.title,
+  .article>.titlepage h1.title{ font-size:30px; }
+.titlepage h3.author{}
+.titlepage p.releaseinfo{ padding-bottom:10px; }
+
+.book>.toc,
+  .book>.list-of-figures{ margin-bottom:30px; }
+.book>.list-of-tables,
+  .book>.chapter,
+  .article>.section,
+  .article>.toc{ margin-bottom:50px; }
+.toc .toc,
+  .list-of-figures dl,
+  .list-of-tables dl{ margin:14px 0 0; }
+.toc dt:hover,
+  .list-of-figures dt:hover,
+  .list-of-tables dt:hover{ background:#eee; }
+.toc .chapter a,
+  .toc .section a{ line-height:28px; color:#0088dc; }
+.toc .section a,
+  .article .toc>dd .section a{ padding-left:18px; line-height:22px; font-size:12px; }
+.chapter .toc .section a{ line-height:24px; font-size:14px; padding:0; }
+.article .toc .section a{ line-height:28px; font-size:14px; padding:0; }
+.chapter .toc p{ color:#333; }
+
+.list-of-figures dt,
+  .list-of-figures dt a,
+  .list-of-tables dt,
+  .list-of-tables dt a,
+  .qandaset dt,
+  .qandaset dt a{ line-height:28px; color:#0088dc; }
+
+.titlepage h1.title{ font-size:24px; }
+.book>.chapter>h2{ padding-top:30px; }
+.chapter .variablelist dt{ color:#333; }
+.chapter .variablelist dd,
+  .section .variablelist dd{ padding:6px 0 14px; }
+.chapter .variablelist dd p,
+  .section .variablelist dd p{ color:#8B8989; }
+.chapter>.section{ padding-top:30px; }
+.figure .title b{font-size:14px;}
+.figure-contents{ padding:14px 0 24px; }
+code{ font-weight:bold; color:#333; }
+.programlisting{ display:block; margin:0 0 30px; border:1px solid #ddd; padding:22px; background:#fff; color:#666; line-height:22px; }
+.orderedlist .programlisting{ margin-top:12px; }
+.chapter>p,
+  .section>p{ padding-bottom:22px; }
+.chapter p,
+  .section p{ color:#333; line-height:22px; }
+
+.table{ margin:6px 0 22px; }
+.table .title,
+  .table .title b{ font-size:14px; }
+.table-contents table{ margin:12px 0 0; border:1px solid #ddd; width:100%; }
+.table-contents th{ padding:8px; color:#333; background:#fafafa; text-align:left; }
+.table-contents td{ padding:8px; white-space:pre-line; background:#fff; }
+
+.chapter>.itemizedlist,
+  .chapter>.orderedlist{ padding:6px 0 20px; }
+.listitem{ margin-left:24px; text-indent:-4px; list-style:disc; }
+
+.qandaset .question p{ padding:14px 8px 2px 0; color:#333; font-size:16px; }
+.qandaset .answer p{ color:#8B8989; }
+
+.bibliomixed{ padding:3px 0 0; }
+
+.xref,
+  .uri,
+  .href{ font-weight:bold; }
+
+.xref:hover,
+  .uri:hover,
+  .href:hover{ text-decoration:underline; }
+
+
