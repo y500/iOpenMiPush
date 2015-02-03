@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name                = "iOpenWeChat"
+  s.name                = "iOpenMipush"
   s.version             = "0.0.1"
   s.summary             = "小米推送SDK"
   s.description         = <<-DESC
