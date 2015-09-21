@@ -15,5 +15,6 @@ Pod::Spec.new do |s|
   s.source              = { :git => "https://github.com/y500/iOpenMiPush", :tag => "0.0.1" }
   s.source_files        = 'SDK/*.{h,m,a}'
   s.vendored_libraries  = 'SDK/libMiPushSDK.a'
-  s.frameworks = 'SystemConfiguration', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony', 'libresolv.dylib', 'libxml2.dylib', 'libz.dylib'
+  s.frameworks = 'SystemConfiguration', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony'
+  s.library = 'libresolv', 'libxml2', 'libz'
 end
