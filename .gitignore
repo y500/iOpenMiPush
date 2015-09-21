@@ -1,0 +1,34 @@
+# 此为注释 – 将被 Git 忽略
+# 忽略所有 .a 结尾的文件
+# *.a
+# 但 lib.a 除外
+# !lib.a
+# 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+# /TODO
+# 忽略 build/ 目录下的所有文件
+# build/
+# 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+# doc/*.txt
+
+
+#以上是例子，下面是真正要忽略的文件
+
+build/
+*.o
+*/*.xcuserstate
+*.xcuserstate
+*.xcbkptlist
+*.xccheckout
+doc/
+packet.sh
+.DS_Store
+Podfile
+*.xcbkptlist
+*.podspec
+*/.DS_Store
+innmall.xcodeproj/project.xcworkspace/*
+innmall.xcodeproj/xcuserdata/*
+uru.xcodeproj/project.xcworkspace/xcuserdata/
+*/xcuserdata/
+*/Pods
+*/Podfile.lock
