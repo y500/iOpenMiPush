@@ -7,12 +7,14 @@ Pod::Spec.new do |s|
                           DESC
   s.homepage            = "http://dev.xiaomi.com/doc/?page_id=1670"
   s.license             = { :type => 'LGPL', :text => <<-LICENSE
-                                                   ® 1998 - 2013 Tencent All Rights Reserved.
+                                                   小米科技 京ICP备10046444号 京公网安备1101080212535.
                                                    LICENSE
                           }
   s.author              = { "小米科技" => "xiaomi.com" }
   s.platform            = :ios
-  s.source              = { :git => "https://github.com/y500/iOpenMiPush", :tag => "v#{s.version.to_s}" }
+  s.source              = { :git => "https://github.com/y500/iOpenMiPush", :tag => "0.0.1" }
   s.source_files        = 'SDK/*.{h,m,a}'
   s.vendored_libraries  = 'SDK/libMiPushSDK.a'
+  s.frameworks = 'SystemConfiguration', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony'
+  s.library = 'resolv', 'xml2', 'z'
 end
