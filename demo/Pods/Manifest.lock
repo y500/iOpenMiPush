@@ -1,0 +1,14 @@
+PODS:
+  - iOpenMipush (0.0.1)
+
+DEPENDENCIES:
+  - iOpenMipush (from `https://raw.githubusercontent.com/y500/iOpenMiPush/master/iOpenMiPush.podspec`)
+
+EXTERNAL SOURCES:
+  iOpenMipush:
+    :podspec: https://raw.githubusercontent.com/y500/iOpenMiPush/master/iOpenMiPush.podspec
+
+SPEC CHECKSUMS:
+  iOpenMipush: 33d34b8167a9d26d31361b99395d166c5258e7cc
+
+COCOAPODS: 0.35.0

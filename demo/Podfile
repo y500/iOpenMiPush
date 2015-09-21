@@ -1,1 +1,1 @@
-pod 'iOpenMipush', path:'../'
+pod 'iOpenMipush', :podspec => 'https://raw.githubusercontent.com/y500/iOpenMiPush/master/iOpenMiPush.podspec'
