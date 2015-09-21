@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
                           }
   s.author              = { "小米科技" => "xiaomi.com" }
   s.platform            = :ios
-  s.source              = { :git => "https://github.com/y500/iOpenMiPush", :tag => "v#{s.version.to_s}" }
+  s.source              = { :git => "https://github.com/y500/iOpenMiPush", :tag => "0.0.1" }
   s.source_files        = 'SDK/*.{h,m,a}'
   s.vendored_libraries  = 'SDK/libMiPushSDK.a'
 end
