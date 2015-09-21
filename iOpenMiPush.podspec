@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                           DESC
   s.homepage            = "http://dev.xiaomi.com/doc/?page_id=1670"
   s.license             = { :type => 'LGPL', :text => <<-LICENSE
-                                                   ® 1998 - 2013 Tencent All Rights Reserved.
+                                                   小米科技 京ICP备10046444号 京公网安备1101080212535.
                                                    LICENSE
                           }
   s.author              = { "小米科技" => "xiaomi.com" }
