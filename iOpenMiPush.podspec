@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.source_files        = 'SDK/*.{h,m,a}'
   s.vendored_libraries  = 'SDK/libMiPushSDK.a'
   s.frameworks = 'SystemConfiguration', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony'
-  s.library = 'libresolv', 'libxml2', 'libz'
+  s.library = 'libresolv.dylib', 'libxml2.dylib', 'libz.dylib'
 end
