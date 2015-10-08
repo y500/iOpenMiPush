@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name                = "iOpenMipush"
+  s.name                = "iOpenMiPush"
   s.version             = "0.0.1"
   s.summary             = "小米推送SDK"
   s.description         = <<-DESC
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
                           }
   s.author              = { "小米科技" => "xiaomi.com" }
   s.platform            = :ios
-  s.source              = { :git => "https://github.com/y500/iOpenMiPush", :tag => "0.0.1" }
+  s.source              = { :git => "https://github.com/y500/iOpenMiPush.git", :tag => "0.0.1" }
   s.source_files        = 'SDK/*.{h,m,a}'
   s.vendored_libraries  = 'SDK/libMiPushSDK.a'
   s.frameworks = 'SystemConfiguration', 'CFNetwork', 'MobileCoreServices', 'CoreTelephony'
