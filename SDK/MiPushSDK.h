@@ -25,16 +25,30 @@
 - (void)miPushRequestSuccWithSelector:(NSString *)selector data:(NSDictionary *)data;
 - (void)miPushRequestErrWithSelector:(NSString *)selector error:(int)error data:(NSDictionary *)data;
 
-@end
 
+/**
+ * 启用长连接后, 当收到消息是就会回调此方法
+ *
+ * @param
+ *     type: 消息类型
+ *     data: 返回结果字典, 跟apns的消息格式一样
+ */
+- (void)miPushReceiveNotification:(NSDictionary*)data;
+
+@end
 
 @interface MiPushSDK : NSObject
 
 /**
  * 客户端注册设备
+ * @param 
+ *      delegate: 回调函数
+ *      type: apns推送类型. (Badge, Alert, Sound)
+ *      connect: 是否启动长连接, 它跟APNSs是不同的通道(不管是否启动系统推送, app在前台都可以收到在线或离线消息)
  */
 + (void)registerMiPush:(id<MiPushSDKDelegate>)delegate;
 + (void)registerMiPush:(id<MiPushSDKDelegate>)delegate type:(UIRemoteNotificationType)type;
++ (void)registerMiPush:(id<MiPushSDKDelegate>)delegate type:(UIRemoteNotificationType)type connect:(BOOL)connect;
 
 /**
  * 客户端设备注销
@@ -55,6 +69,10 @@
  */
 + (void)bindDeviceToken:(NSData *)deviceToken;
 
+/**
+ * 当同时启动APNs与内部长连接时, 把两处收到的消息合并. 通过miPushReceiveNotification返回
+ */
++ (void)handleReceiveRemoteNotification:(NSDictionary*)userInfo;
 
 /**
  * 客户端设置别名
@@ -74,20 +92,40 @@
 
 
 /**
+ * 客户端设置帐号
+ * 多设备设置同一个帐号, 发送消息时多设备可以同时收到
+ *
+ * @param
+ *     account: 帐号 (length:128)
+ */
++ (void)setAccount:(NSString *)account;
+
+/**
+ * 客户端取消帐号
+ *
+ * @param
+ *     account: 帐号 (length:128)
+ */
++ (void)unsetAccount:(NSString *)account;
+
+
+/**
  * 客户端设置主题
+ * 支持同时设置多个topic, 中间使用","分隔
  *
  * @param
  *     subscribe: 主题类型描述
  */
-+ (void)subscribe:(NSString *)topic;
++ (void)subscribe:(NSString *)topics;
 
 /**
  * 客户端取消主题
+ * 支持同时设置多个topic, 中间使用","分隔
  *
  * @param
  *     subscribe: 主题类型描述
  */
-+ (void)unsubscribe:(NSString *)topic;
++ (void)unsubscribe:(NSString *)topics;
 
 
 /**
@@ -98,5 +136,36 @@
  *      messageId:Payload里面对应的miid参数
  */
 + (void)openAppNotify:(NSString *)messageId;
+
+
+/**
+ * NOTE 废弃. 请使用getAllAliasAsync替换
+ * 获取客户端所有设置的别名
+ */
++ (NSArray*)getAllAlias __deprecated;
+
+/**
+ * 获取客户端所有设置的别名
+ */
++ (void)getAllAliasAsync;
+
+/**
+ * NOTE 废弃. 请使用getAllTopicAsync替换
+ * 获取客户端所有订阅的主题
+ */
++ (NSArray*)getAllTopic __deprecated;
+
+/**
+ * 获取客户端所有订阅的主题
+ */
++ (void)getAllTopicAsync;
+
++ (void)getAllAccountAsync;
+
+
+/**
+ * 获取SDK版本号
+ */
++ (NSString*)getSDKVersion;
 
 @end
